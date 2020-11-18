@@ -15,7 +15,7 @@ public class Main {
 
         boolean b = person.hasAddress();
         if (!b) {
-            System.out.println("Адрес не узнан. Текущий адрес указан как: " + person.getAddress());
+            System.out.println("Адрес не узнан");
         } else {
             System.out.println("Текущий адрес: " + person.getAddress());
         }

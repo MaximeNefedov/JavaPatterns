@@ -41,7 +41,6 @@ public class Person {
 
     public boolean hasAddress() {
         if (this.address == null || this.address.isEmpty()) {
-            setAddress("any");
             return false;
         }
         return true;
@@ -73,7 +72,7 @@ public class Person {
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", age=" + showAge() +
-                ", address='" + address + '\'' +
+                ", address='" + showAddress() + '\'' +
                 '}';
     }
 
@@ -83,6 +82,16 @@ public class Person {
             output = String.valueOf(this.age);
         } else {
             output = "Возраст неизвестен";
+        }
+        return output;
+    }
+
+    private String showAddress() {
+        String output;
+        if (hasAddress()) {
+            output = String.valueOf(this.address);
+        } else {
+            output = "Адрес неизвестен";
         }
         return output;
     }
